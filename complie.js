@@ -61,6 +61,7 @@ CompileUtil = {
 	getVal(vm, expr) {
 		expr = expr.split('.')
 		return expr.reduce((prev, next) => {
+			console.log(prev)
 			return prev[next]
 		}, vm.$data)
 	},
